@@ -80,7 +80,7 @@ function App() {
   		}
 
   		function Split() {
-  		  setResult(Number(value1) / Number(value2));
+  		  setResult((Number(value1) / Number(value2)).toFixed(2));
   		}
 			function Module() {
   		  setResult(Number(value1) / Number(value2));
