@@ -119,36 +119,49 @@ function App() {
 
 				<div className="container text-xs flex mt-auto mx-auto flex-col h-2/3 w-1/2">
           <button className="flex mx-auto" onClick={onClick}>Начать общение</button>
-          <input className="flex my-auto w-2/3 h-6 text-center text-white rounded-lg bg-indigo-500/40" ref={ref} disabled="disabled"/>
+
+          <textarea className="flex my-auto  resize-none w-2/3  text-center form-control text-white rounded-lg bg-indigo-500/40" ref={ref} disabled="disabled" />
+					<div className="flex place-self-end space-x-0.5">
+						<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" value={name} onChange={e => setName(e.target.value)}/>
+						<button className="flex my-auto w-15 place-self-end text-white bg-indigo-500 rounded-full" onClick={onSecondClick}>
+						<div className="bg bg-indigo-500 rounded-full">
+							<Send/>
+						</div>
+						</button>
+					</div>
+
+					<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" ref={ref2} disabled="disabled"/>
+					<div className="flex place-self-end space-x-0.5">
+						<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" value={country} onChange={e => setCountry(e.target.value)}/>
+						<button className="flex my-auto w-15 place-self-end text-white  bg-indigo-500 rounded-full" onClick={onThirdClick}>
+						<div className="bg bg-indigo-500 rounded-full">
+							<Send/>
+						</div>
+						</button>
+					</div>
+
+					<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" ref={ref3} disabled="disabled"/>
+					<div className="flex place-self-end space-x-0.5">
+						<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" value={city} onChange={e => setCity(e.target.value)}/>
+						<button className="flex my-auto w-15 place-self-end text-white  bg-indigo-500 rounded-full" onClick={onFourthClick}>
+						<div className="bg bg-indigo-500 rounded-full">
+							<Send/>
+						</div>
+						</button>	
+					</div>
 					
+					<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" ref={ref4} disabled="disabled"/>
 					<div className="flex place-self-end space-x-0.5">
-						<input className="flex my-auto place-self-end h-6 text-center text-white rounded-xl bg-indigo-500" value={name} onChange={e => setName(e.target.value)}/>
-						<button className="flex my-auto w-15 h-6 place-self-end text-white rounded-tr-lg rounded-br-lg bg-indigo-500" onClick={onSecondClick}></button>
-						
+						<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" value={dateOfBirth} onChange={e => setDateOfBirth(e.target.value)}/>
+						<button className="flex my-auto w-15 place-self-end text-white  bg-indigo-500 rounded-full" onClick={onFifthClick}>
 						<div className="bg bg-indigo-500 rounded-full">
 							<Send/>
 						</div>
+						</button>	
 					</div>
+					
+					<textarea className="flex my-auto  resize-none w-2/3 text-center  text-white rounded-lg bg-indigo-500/40" ref={ref5} disabled="disabled"/>
 
-					<input className="flex my-auto w-2/3 h-6 text-center text-white rounded-lg bg-indigo-500/40 " ref={ref2} disabled="disabled"/>
-					{/* <h3>{name}</h3> */}
-					<div className="flex place-self-end space-x-0.5">
-						<input className="flex my-auto place-self-end h-6 text-center text-white rounded-xl bg-indigo-500" value={country} onChange={e => setCountry(e.target.value)}/>
-						<button className="flex my-auto w-15 h-6 place-self-end text-white rounded-tr-lg rounded-br-lg bg-indigo-500" onClick={onThirdClick}></button>
-						
-						<div className="bg bg-indigo-500 rounded-full">
-							<Send/>
-						</div>
-					</div>
-					<input className="flex mx-auto my-auto w-full text-center text-white rounded-md border-2 border-amber-300 bg-stone-500 " ref={ref3} disabled="disabled"/>
-
-					<input className="flex my-auto place-self-end text-center text-white rounded-md border-2 border-amber-300 bg-stone-500" value={city} onChange={e => setCity(e.target.value)}/>
-					<button className="flex w-1/4 h-7 justify-center my-auto text-center text-white rounded-md bg-violet-600 scale-95 hover:scale-x-100 ease-in-out duration-300" onClick={onFourthClick}>Send</button>	
-					<input className="flex mx-auto my-auto w-full text-center text-white rounded-md border-2 border-amber-300 bg-stone-500 " ref={ref4} disabled="disabled"/>
-				
-					<input className="flex my-auto place-self-end text-center text-white rounded-md border-2 border-amber-300 bg-stone-500" value={dateOfBirth} onChange={e => setDateOfBirth(e.target.value)}/>
-					<button className="flex w-1/4 h-7 justify-center my-auto text-center text-white rounded-md bg-violet-600 scale-95 hover:scale-x-100 ease-in-out duration-300" onClick={onFifthClick}>Send</button>	
-					<input className="flex mx-auto my-auto w-full text-center text-white rounded-md border-2 border-amber-300 bg-stone-500 " ref={ref5} disabled="disabled"/>
 				</div>
 
 			</div>
