@@ -110,7 +110,7 @@ function App() {
 				<div className="flex h-10 w-1/2 mx-auto flex-row justify-center space-x-2">
       	<button className="flex w-1/4 h-7 justify-center my-auto text-center text-white rounded-md bg-violet-600 scale-95 hover:scale-105 transition-all transform duration-500" onClick={Sum}>Сложить</button>
       	<button className="flex w-1/4 h-7 justify-center my-auto text-center text-white rounded-md bg-violet-600 scale-95 hover:scale-105 transition-all transform duration-500" onClick={Subtract}>Вычесть</button>
-      	<button className="flex w-1/4 h-7 justify-center my-auto text-center text-white rounded-md bg-violet-600 scale-95 hover:scale-105 transition-all transform duration-500" onClick={Multiply}>Усножить</button>
+      	<button className="flex w-1/4 h-7 justify-center my-auto text-center text-white rounded-md bg-violet-600 scale-95 hover:scale-105 transition-all transform duration-500" onClick={Multiply}>Умножить</button>
       	<button className="flex w-1/4 h-7 justify-center my-auto text-center text-white rounded-md bg-violet-600 scale-95 hover:scale-105 transition-all transform duration-500" onClick={Split}>Разделить</button>
 				<button className="flex w-1/4 lg:w-1/2 md:w-1/2  h-7 justify-center my-auto text-center text-white rounded-md bg-violet-600 scale-95 hover:scale-x-100 ease-in-out duration-300" onClick={Module}>разность модулей</button>
 				</div>
