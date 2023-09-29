@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import React from "react";
-import { Component } from "react";
 import Send from "./Components/Send"
+
 function App() {
 
 	const [theme, setTheme] = useState(false);
@@ -18,6 +18,7 @@ function App() {
     }
   });
 
+
 			const [name, setName] = useState("");
 			const [country, setCountry] = useState("");
 			const [city, setCity] = useState("");
@@ -30,7 +31,7 @@ function App() {
 				}
 			
 				const ref2 = useRef('');
-				const [vall] = useState('Приятно познакомиться, я Бот Курт. А в какой стране ты проживаешь?');
+				const [vall] = useState(`Приятно познакомиться, я Бот Курт. А в какой стране ты проживаешь?`);
 				function onSecondClick() {
 					 ref2.current.value = `${vall}`;
 				}
@@ -46,7 +47,7 @@ function App() {
 					 ref4.current.value = `${vallll}`;
 				}
 				const ref5 = useRef('');
-				const [valllll] = useState('Уважаемый "+name+ "! На сегодняшний день Вы проживаете в стране " +country+", в городе " +city+", и вы родились " +dateOfBirth+');
+				const [valllll] = useState(`Уважаемый  На сегодняшний день Вы проживаете в стране " +country+", в городе " +city+", и вы родились " +dateOfBirth+`);
 				function onFifthClick() {
 					 ref5.current.value = `${valllll}`;
 				}
@@ -116,13 +117,13 @@ function App() {
 				</div>
 
 				
-
+				<button className="flex mx-auto text-xs pt-1/4" onClick={onClick}>Начать общение</button>
 				<div className="container text-xs flex mt-auto mx-auto flex-col h-2/3 w-1/2">
-          <button className="flex mx-auto" onClick={onClick}>Начать общение</button>
-
-          <textarea className="flex my-auto  resize-none w-2/3  text-center form-control text-white rounded-lg bg-indigo-500/40" ref={ref} disabled="disabled" />
+          
+				
+          <input className="flex my-auto  w-2/3 h-6 text-center text-white rounded-lg bg-indigo-500/40" ref={ref} disabled="disabled" />
 					<div className="flex place-self-end space-x-0.5">
-						<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" value={name} onChange={e => setName(e.target.value)}/>
+					<input className="flex my-auto  w-2/3 h-6 text-center text-white rounded-lg bg-indigo-500/40" value={name} onChange={e => setName(e.target.value)} name = "name1"/>
 						<button className="flex my-auto w-15 place-self-end text-white bg-indigo-500 rounded-full" onClick={onSecondClick}>
 						<div className="bg bg-indigo-500 rounded-full">
 							<Send/>
@@ -130,9 +131,9 @@ function App() {
 						</button>
 					</div>
 
-					<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" ref={ref2} disabled="disabled"/>
+					<input className="flex my-auto  w-2/3 h-6 text-center text-white rounded-lg bg-indigo-500/40" ref={ref2} disabled="disabled"/>
 					<div className="flex place-self-end space-x-0.5">
-						<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" value={country} onChange={e => setCountry(e.target.value)}/>
+						<input className="flex my-auto  w-2/3 h-6 text-center text-white rounded-lg bg-indigo-500/40" value={country} onChange={e => setCountry(e.target.value)}/>
 						<button className="flex my-auto w-15 place-self-end text-white  bg-indigo-500 rounded-full" onClick={onThirdClick}>
 						<div className="bg bg-indigo-500 rounded-full">
 							<Send/>
@@ -140,9 +141,9 @@ function App() {
 						</button>
 					</div>
 
-					<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" ref={ref3} disabled="disabled"/>
+					<input className="flex my-auto  w-2/3 h-6 text-center text-white rounded-lg bg-indigo-500/40" ref={ref3} disabled="disabled"/>
 					<div className="flex place-self-end space-x-0.5">
-						<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" value={city} onChange={e => setCity(e.target.value)}/>
+					<input className="flex my-auto  w-2/3 h-6 text-center text-white rounded-lg bg-indigo-500/40" value={city} onChange={e => setCity(e.target.value)}/>
 						<button className="flex my-auto w-15 place-self-end text-white  bg-indigo-500 rounded-full" onClick={onFourthClick}>
 						<div className="bg bg-indigo-500 rounded-full">
 							<Send/>
@@ -150,9 +151,9 @@ function App() {
 						</button>	
 					</div>
 					
-					<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" ref={ref4} disabled="disabled"/>
+					<input className="flex my-auto  w-2/3 h-6 text-center text-white rounded-lg bg-indigo-500/40" ref={ref4} disabled="disabled"/>
 					<div className="flex place-self-end space-x-0.5">
-						<textarea className="flex my-auto resize-none w-2/3 text-center form-control text-white rounded-lg bg-indigo-500/40" value={dateOfBirth} onChange={e => setDateOfBirth(e.target.value)}/>
+						<input className="flex my-auto  w-2/3 h-6 text-center text-white rounded-lg bg-indigo-500/40" value={dateOfBirth} onChange={e => setDateOfBirth(e.target.value)}/>
 						<button className="flex my-auto w-15 place-self-end text-white  bg-indigo-500 rounded-full" onClick={onFifthClick}>
 						<div className="bg bg-indigo-500 rounded-full">
 							<Send/>
@@ -160,7 +161,7 @@ function App() {
 						</button>	
 					</div>
 					
-					<textarea className="flex my-auto  resize-none w-2/3 text-center  text-white rounded-lg bg-indigo-500/40" ref={ref5} disabled="disabled"/>
+					<input className="flex my-auto w-2/3 h-6 text-center text-white rounded-lg bg-indigo-500/40" ref={ref5} disabled="disabled" />
 
 				</div>
 
@@ -171,125 +172,3 @@ function App() {
 }
 export default App;
 
-// function App() {
-//   const [number1, setNumber1] = useState(0);
-//   const [number2, setNumber2] = useState(0);
-//   const [result, setResult] = useState(0);
-
-//   function calculateTotal() {
-//     setResult(result);
-//   }
-
-//   return (
-//     <div className="App">
-//       <h1>Введите два числа</h1>
-
-//       <div className="number-inputs">
-//         <input
-//           type="number"
-//           value={number1}
-//           onChange={e => setNumber1(+e.target.value)}
-//           placeholder="0"
-//         />
-//         <input
-//           type="number"
-//           value={number2}
-//           onChange={e => setNumber2(+e.target.value)}
-//           placeholder="0"
-//         />
-//       </div>
-
-//       <button onClick={calculateTotal}>Посчитать</button>
-
-// 			<input
-//           type="number"
-//           value={result}
-//           onChange={e => setNumber2(+e.target.value)}
-//           placeholder="0"
-
-//         />
-
-//     </div>
-//   );
-// }
-// export default App;
-
-// function App() {
-
-// 	const [calc, setCalc] = useState("");
-// 	const [result, setResult] = useState("");
-
-// 	const updateCalc = value => {
-// 		setCalc(calc + value);
-
-// 	const calculate = () => {
-// 		setCalc(eval(calc).toString());
-// 	}
-// 	}
-// 	return (
-// 	<div className="App">
-// 					<div className="sum">
-// 				<div className="display">
-// 					<span>(0)</span> 0
-// 				</div>
-// 					<div type = "button" className="operators flex flex-col space-y-2">
-// 							<button  className="flex mx-auto px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700">Сложить</button>
-// 							<button  className="flex mx-auto px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700">Вычесть</button>
-// 							<button  className="flex mx-auto px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700">Умножить</button>
-// 							<button  className="flex mx-auto px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700">Разделить</button>
-// 					</div>
-// 			</div>
-// 	</div>
-// 	);
-// }
-// export default App;
-
-// export default function Home() {
-
-//   return (
-//     <main>
-//       <div className=" my-2 overflow-hidden rounded shadow-lg">
-//         <div className="px-6 py-4">
-//           <div className="mb-2 text-xl font-bold">Введите числа</div>
-//           <div className="flex flex-col container object-cover">
-//             <form className="flex flex-row space-x-4" name="publish" onSubmit="{submitNumber}">
-//               <input
-//                 className="mb-4 border-b-2"
-//                 id="first"
-//                 name="name"
-//                 type="text"
-//                 autocomplete="name"
-//                 required
-//               />
-
-//               <input
-//                 className="mb-4 border-b-2"
-//                 id="second"
-//                 name="name"
-//                 type="text"
-//                 autocomplete="name"
-//                 required
-//               />
-
-//               <input
-//                 className="mb-4 border-b-2"
-//                 id="result"
-//                 name="name"
-//                 type="text"
-//                 autocomplete="name"
-//                 required
-//               />
-//             </form>
-//             <button
-//               type="button"
-//               className="flex mx-auto px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
-//             >
-//               Посчитать
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </main>
-
-//   );
-// };
